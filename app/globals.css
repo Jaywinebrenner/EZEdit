@@ -238,6 +238,12 @@
     flex-direction: column;
   }
 
+  .mobi-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .sidebar-nav_element {
     cursor: pointer;
   }
