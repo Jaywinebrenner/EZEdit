@@ -1,11 +1,11 @@
 
-
+import Header from "@/components/shared/Header";
 
 import React from 'react'
 
 function AddTransformationTypePage() {
   return (
-    <div>AddTransformationTypePage</div>
+    <Header title="Transformation Title" subtitle="Transformation Subtitle"/>
   )
 }
 
