@@ -11,6 +11,7 @@ import Image from 'next/image'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { navLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
+import { Button } from "@/components/ui/button"
 
 
 const MobileNav = () => {
@@ -42,7 +43,7 @@ const MobileNav = () => {
                   const isActive = link.route === pathname
                      return (
                       <li className={`p-18 flex whitespace-nowrap text-dark-700 ${isActive && 'gradient-text'}`} key={`nav-link-key=${i}`}>
-                        <Link className='sidebar-link' href={link.route}>
+                        <Link className='sidebar-link cursor-pointer' href={link.route}>
                           <Image
                           src={link.icon}
                           alt="logo"
@@ -66,6 +67,11 @@ const MobileNav = () => {
             </SheetContent>
           </Sheet>
           </SignedIn>
+          <SignedOut>
+            <Button asChild className='button bg-purple-gradient bg-cover' variant="outline">
+              <Link href="/sign-in">Login</Link>
+            </Button>
+          </SignedOut>
 
         </nav>
     

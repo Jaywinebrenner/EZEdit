@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="home">
       <p>HOME</p>
-      <UserButton afterSignOutUrl="/"/>
+      {/* <UserButton afterSignOutUrl="/"/> */}
 
     </main>
   );
