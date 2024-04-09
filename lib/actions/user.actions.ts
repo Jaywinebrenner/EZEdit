@@ -21,10 +21,11 @@ export async function createUser(user: CreateUserParams) {
 
 // READ
 export async function getUserById(userId: string) {
+
   try {
     await connectToDatabase();
-
     const user = await User.findOne({ clerkId: userId });
+    console.log("AWAIT?????", user)
 
     if (!user) throw new Error("User not found");
 

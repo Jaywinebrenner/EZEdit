@@ -7,3 +7,7 @@ https://ez-edit-sigma.vercel.app/
 
 Based on this:
 https://www.youtube.com/watch?v=Ahwoks_dawU
+Currently at 1:50
+
+Mongo DB
+CLient for authentication
