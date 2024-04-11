@@ -3,7 +3,7 @@
 import SideBar from '@/components/shared/SideBar'
 import MobileNav from '@/components/shared/MobileNav'
 import React from 'react'
-
+import {Toaster} from "@/components/ui/toaster"
 function Layout({children}: {children: React.ReactNode}) {
   return (
     <main className='root'>
@@ -17,6 +17,7 @@ function Layout({children}: {children: React.ReactNode}) {
 
             </div>
         </div>
+        <Toaster/>
     </main>
   )
 }
