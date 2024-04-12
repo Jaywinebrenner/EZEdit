@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-prototype-builtins */
-import qs from "qs";
 import { type ClassValue, clsx } from "clsx";
+import qs from "qs";
 import { twMerge } from "tailwind-merge";
 
 import { aspectRatioOptions } from "@/constants";
@@ -52,19 +52,13 @@ export const dataUrl = `data:image/svg+xml;base64,${toBase64(
 )}`;
 // ==== End
 
-interface FormUrlQueryParams {
-  searchParams: URLSearchParams;
-  key: string;
-  value: string;
-}
-
 // FORM URL QUERY
 export const formUrlQuery = ({
   searchParams,
   key,
   value,
-}: FormUrlQueryParams): string => {
-  const params = { ...Object.fromEntries(searchParams), [key]: value };
+}: FormUrlQueryParams) => {
+  const params = { ...qs.parse(searchParams.toString()), [key]: value };
 
   return `${window.location.pathname}?${qs.stringify(params, {
     skipNulls: true,
