@@ -108,11 +108,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
       secure: true,
     })
 
-<<<<<<< HEAD
     let expression = 'folder=EZEdit';
-=======
-    let expression = 'folder=imaginify';
->>>>>>> origin/main
 
     if (searchQuery) {
       expression += ` AND ${searchQuery}`
