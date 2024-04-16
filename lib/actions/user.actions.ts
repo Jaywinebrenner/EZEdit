@@ -11,10 +11,15 @@ export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase();
 
+    console.log("Creating new user:", user); // Log input user object
+
     const newUser = await User.create(user);
+
+    console.log("New user created:", newUser); // Log newly created user object
 
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
+    console.error("Error creating user:", error); // Log error for debugging
     handleError(error);
   }
 }
@@ -24,8 +29,8 @@ export async function getUserById(userId: string) {
 
   try {
     await connectToDatabase();
+
     const user = await User.findOne({ clerkId: userId });
-    console.log("AWAIT?????", user)
 
     if (!user) throw new Error("User not found");
 

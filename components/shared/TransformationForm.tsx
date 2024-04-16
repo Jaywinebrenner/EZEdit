@@ -311,8 +311,6 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           </Button>
         </div>
       </form>
-{creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal/>}
-
     </Form>
   )
 }
