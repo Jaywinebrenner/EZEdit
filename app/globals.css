@@ -417,3 +417,7 @@
   text-align: center;
 
 }
+
+.sidebar-nav a {
+  color: white;
+}
